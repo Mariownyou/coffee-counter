@@ -1,8 +1,9 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Averia_Serif_Libre, Lilita_One } from "next/font/google";
 import 'bulma/css/bulma.css';
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const lilita = Lilita_One({ subsets: ["latin"], weight: ['400'] });
+const averia = Averia_Serif_Libre({ subsets: ["latin"], weight: ['300', '400', '700'] });
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={averia.className}>{children}</body>
     </html>
   );
 }
